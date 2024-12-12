@@ -58,7 +58,6 @@ public class SimSettings {
 
 	private double SIMULATION_TIME; //minutes unit in properties file
 	private double WARM_UP_PERIOD; //minutes unit in properties file
-	private double COLDSTART_LATENCY; //minutes unit in properties file
 	private double INTERVAL_TO_GET_VM_LOAD_LOG; //minutes unit in properties file
 	private double INTERVAL_TO_GET_LOCATION_LOG; //minutes unit in properties file
 	private double INTERVAL_TO_GET_AP_DELAY_LOG; //minutes unit in properties file
@@ -94,7 +93,6 @@ public class SimSettings {
 	private int RAM_FOR_CLOUD_VM; //MB
 	private int STORAGE_FOR_CLOUD_VM; //Byte
 
-	private int MIN_GPU_CORE_FOR_VM;
 	private int MIN_CORE_FOR_VM;
 	private int MIN_MIPS_FOR_VM; //MIPS
 	private int MIN_RAM_FOR_VM; //MB
@@ -102,7 +100,6 @@ public class SimSettings {
 	
     private MobileProperties[] mp;
 	
-	private int MAX_GPU_CORE_FOR_VM;
 	private int MAX_CORE_FOR_VM;
 	private int MAX_MIPS_FOR_VM; //MIPS
 	private int MAX_RAM_FOR_VM; //MB
@@ -210,18 +207,14 @@ public class SimSettings {
 			
 			if (isEnergy){
 				/* ENTRUST PROPERTIES*/
-				
-				COLDSTART_LATENCY = (double)60 * Double.parseDouble(prop.getProperty("coldstartlatency")); //seconds
-				
+								
 				//mobile devices new properties
 				MIN_RAM_FOR_VM = Integer.parseInt(prop.getProperty("min_ram_for_mobile_vm"));
-				MIN_GPU_CORE_FOR_VM = Integer.parseInt(prop.getProperty("min_GPU_core_for_mobile_vm"));
 				MIN_CORE_FOR_VM = Integer.parseInt(prop.getProperty("min_core_for_mobile_vm"));
 				MIN_MIPS_FOR_VM = Integer.parseInt(prop.getProperty("min_mips_for_mobile_vm"));
 				MIN_STORAGE_FOR_VM = Integer.parseInt(prop.getProperty("min_storage_for_mobile_vm"));
 	
 				MAX_RAM_FOR_VM = Integer.parseInt(prop.getProperty("max_ram_for_mobile_vm"));
-				MAX_GPU_CORE_FOR_VM = Integer.parseInt(prop.getProperty("max_GPU_core_for_mobile_vm"));
 				MAX_CORE_FOR_VM = Integer.parseInt(prop.getProperty("max_core_for_mobile_vm"));
 				MAX_MIPS_FOR_VM = Integer.parseInt(prop.getProperty("max_mips_for_mobile_vm"));
 				MAX_STORAGE_FOR_VM = Integer.parseInt(prop.getProperty("max_storage_for_mobile_vm"));		
@@ -391,7 +384,7 @@ public class SimSettings {
 	 */
 	public double getWarmUpPeriod()
 	{
-		return WARM_UP_PERIOD+COLDSTART_LATENCY; 
+		return WARM_UP_PERIOD; 
 	}
 
 	/**
@@ -627,7 +620,7 @@ public class SimSettings {
 	 */
 	public int getCoreForMobileVM()
 	{
-		return SimUtils.getRandomNumber(MIN_CORE_FOR_VM+MIN_GPU_CORE_FOR_VM, MAX_CORE_FOR_VM+MAX_GPU_CORE_FOR_VM);
+		return SimUtils.getRandomNumber(MIN_CORE_FOR_VM, MAX_CORE_FOR_VM);
 	}
 
 	/**
