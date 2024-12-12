@@ -1,0 +1,14 @@
+#auto generated file!
+Overall Servie Data
+completedTask;failedTask;uncompletedTask;failedTaskDuetoBw;serviceTime;processingTime;networkDelay;0;cost;failedTaskDueToVmCapacity;failedTaskDuetoMobility;QoE1;QoE2;refectedTaskDuetoWlanRange;failedTaskDuetoDeviceDeath
+6021;94;1;0;0,5160807893362733;0,5160807893362733;NaN;0,0;0,0;0;0;0,0;0,0;0;94
+Performance of EdgeServer
+completedTaskOnEdge;failedTaskOnEdge;uncompletedTaskOnEdge;0;serviceTimeOnEdge;processingTimeOnEdge;0,0;vmLoadOnEdge;failedTaskDueToVmCapacityOnEdge
+0;0;0;0;0,0;0,0;0,0;0,0;0
+Same but for Cloud
+0;0;0;0;0,0;0,0;0,0;0,0;0
+Same but for Mobile Device
+6021;94;1;0;0,5160807893362733;0,5160807893362733;0,0;0,0;0
+Bw Delays 
+lanDelay;manDelay;wanDelay;gsmDelay;failedTaskDuetoLanBw;failedTaskDuetoManBw;failedTaskDuetoWanBw;failedTaskDuetoGsmBw
+0,0;0,0;0,0;0,0;0;0;0;0
