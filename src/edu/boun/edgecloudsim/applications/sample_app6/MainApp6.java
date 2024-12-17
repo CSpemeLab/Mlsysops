@@ -27,7 +27,7 @@ import edu.boun.edgecloudsim.utils.SimUtils;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MainAppEntrust {
+public class MainApp6 {
 	
 	/**
 	 * Creates main() to run this example

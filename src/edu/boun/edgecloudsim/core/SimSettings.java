@@ -206,7 +206,7 @@ public class SimSettings {
 			IS_ENERGY = isEnergy;
 			
 			if (isEnergy){
-				/* ENTRUST PROPERTIES*/
+				/*  PROPERTIES*/
 								
 				//mobile devices new properties
 				MIN_RAM_FOR_VM = Integer.parseInt(prop.getProperty("min_ram_for_mobile_vm"));
@@ -355,7 +355,7 @@ public class SimSettings {
 		}
 		parseApplicationsXML(applicationsFile);
 		
-		/* ENTRUST PROPERTIES*/
+		/*  PROPERTIES*/
 		parseEdgeDevicesXML(edgeDevicesFile,isEnergy);
 
 		return result;
@@ -870,7 +870,7 @@ public class SimSettings {
 				isElementPresent(datacenterElement, "costPerMem");
 				isElementPresent(datacenterElement, "costPerStorage");
 				if (isEnergy) {
-					/* ENTRUST PROPERTIES*/
+					/*  PROPERTIES*/
 					isElementPresent(datacenterElement, "idleConsumption");
 					isElementPresent(datacenterElement, "maxConsumption");
 				}

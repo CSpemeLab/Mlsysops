@@ -25,9 +25,9 @@ public class Task extends Cloudlet {
 	private int hostIndex;
 	private int vmIndex;
 	private int datacenterId;
-	
-	
-	//--------Entrust new field ------- TODO actually unused - Add to total delay?
+
+
+	//-------- new field ------- TODO actually unused - Add to total delay?
 	protected double actualNetworkTime = 0;
 	public double getActualNetworkTime() {
 		return actualNetworkTime;
